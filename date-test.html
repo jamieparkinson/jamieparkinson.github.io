@@ -18,12 +18,9 @@
 
   <script>
     $(function() {
-      $('.currentdatepicker').attr('readonly', false);
-      $('.currentdatepicker').attr({
-            type: 'date',
-            value: moment().format('YYYY-MM-DD'),
-            valueAsDate: new Date()
-        });
+      $('.currentdatepicker').prop('readonly', false);
+      $('.currentdatepicker').prop('type', 'date');
+      $('.currentdatepicker').val(moment().format('YYYY-MM-DD'));
     });
   </script>
 </head>
