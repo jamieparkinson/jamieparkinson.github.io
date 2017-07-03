@@ -8,8 +8,9 @@ body::before, body::after, html::before, html::after {
   background: #5a5a5a; }
 
 body {
-  background-color: #ffefef;
-  padding: 37px; }
+  background-color: rgb(255, 246, 246);
+  padding: 37px;
+  }
   @media screen and (max-width: 400px) {
     body {
       padding: 31px; } }
