@@ -1,0 +1,54 @@
+body {
+  font-family: 'Inconsolata';
+  font-weight: 300;
+  color: $dark-grey;
+
+  h1 {
+    font-size: 1.48em;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+
+    span {
+      white-space: nowrap;
+    }
+
+    span.spacer {
+      margin: 0 11px;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.4em;
+  }
+
+  a {
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: inset 0px -8px 0px $pleasant-pink;
+    transition: box-shadow .2s;
+
+    &:hover {
+      box-shadow: inset 0px -25px 0px $pleasant-pink;
+    }
+  }
+
+  pre {
+    max-width: 968px;
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 1.2em;
+
+    code {
+      font-family: inherit;
+      display: inline-block;
+      background-color: white;
+      border: 1px solid $light-grey;
+      border-radius: 2px;
+      padding: 0 3px;
+    }
+  }
+}
