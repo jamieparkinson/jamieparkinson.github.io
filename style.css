@@ -1,0 +1,254 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Times, "Times New Roman", serif;
+    text-align: center;
+    background-color: #5b0086;
+    background-image: url("images/background.gif");
+    image-rendering: pixelated;
+    font-smoothing: none;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 82px;
+    font-style: italic;
+    font-weight: bold;
+    animation: 1s linear infinite blink;
+    margin: 0 50px;
+    color: #e700d6;
+    text-decoration: underline;
+}
+
+em {
+    font-style: normal;
+}
+
+hr {
+    background-image: url("images/horizontalrule.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 3px;
+    outline: none;
+    border: none;
+    width: 800px;
+    margin: 50px auto;
+}
+
+.welcome-banner {
+    position: relative;
+    margin: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img#safety {
+    position: absolute;
+    left: 20px;
+    top: 90px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+img#sun {
+    position: absolute;
+    right: 20px;
+    top: 90px;
+    z-index: -1;
+}
+
+.tech-marquee, .tech-marquee span {
+    height: 40px;
+}
+
+.tech-marquee img {
+    height: 100%;
+    width: auto;
+    margin: 0 8px;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee > * {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee.marquee-reverse > * {
+    padding-left: 0;
+    padding-right: 100%;
+    float: right;
+    animation: marquee-reverse 30s linear infinite;
+}
+
+
+
+.intro-table {
+    position: relative;
+    border: inset 10px silver;
+    margin: 50px auto;
+    padding: 1px;
+    background-image: url("images/spacebackground.gif");
+    min-width: 800px;
+    width: 75%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.intro-table td {
+    border: 1px solid silver;
+    padding: 0 30px;
+}
+
+.intro-table a {
+    color: deeppink;
+}
+
+img#digger {
+    position: absolute;
+    bottom: -350px;
+    right: -400px;
+    z-index: -1;
+}
+
+.rock-star-10x-developer {
+    background-image: url(images/skull.gif);
+    background-size: 30px;
+    padding: 110px 0;
+}
+
+.rock-star-10x-developer .ninja {
+    display: inline-block;
+    background-image: url(images/wavy.gif);
+    width: calc(100% - 220px);
+    border: 3px solid orange;
+}
+
+h3 {
+    font-size: 50px;
+    color: #0094ff;
+    font-family: "Lucida Handwriting", cursive;
+    letter-spacing: 13px;
+}
+
+table.hackerman {
+    position: relative;
+    border: 35px inset silver;
+    margin: 50px auto;
+    font-weight: bold;
+    font-size: 25px;
+    background-image: url(images/harley.gif);
+    background-size: 90px;
+    background-color: black;
+}
+
+table.hackerman td {
+    padding: 40px;
+    border: 2px dashed papayawhip;
+}
+
+table.hackerman td aside {
+    font-size: 13px;
+    color: deeppink;
+}
+
+table.hackerman a {
+    color: palegreen;
+}
+
+table.hackerman a:hover {
+    text-decoration: none;
+}
+
+table.hackerman a:visited {
+    color: forestgreen;
+}
+
+img#duct {
+    position: absolute;
+    bottom: -100px;
+    right: -238px;
+    z-index: -1;
+}
+
+img#hammockcat {
+    position: absolute;
+    left: -120px;
+}
+
+img#conference {
+    position: absolute;
+    top: -150px;
+    left: -300px;
+    z-index: -1;
+    width: 300px;
+}
+
+img#angel {
+    position: absolute;
+    top: -10px;
+    left: -400px;
+    z-index: -1;
+}
+
+img#graph {
+    position: absolute;
+    top: -90px;
+    right: -200px;
+    z-index: -1;
+}
+
+@keyframes blink {
+    0% {
+        visibility: visible;
+    }
+    80% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0 ,0);
+    }
+    50% {
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0%, 0, 0);
+    }
+}
+
+@font-face {
+    font-family: Lucida Handwriting;
+    src: url(lucida.ttf) format("truetype");
+}
