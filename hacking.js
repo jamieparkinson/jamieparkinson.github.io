@@ -57,7 +57,6 @@ const imageElements = I_KNOW_IMAGES.map((name) => {
   const img = new Image();
   img.id = "i-know-img";
   img.src = `images/i-know/${name}.gif`;
-  img.height = 180;
   img.alt = name;
   return img;
 });
