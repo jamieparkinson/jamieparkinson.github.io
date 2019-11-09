@@ -15,6 +15,7 @@ body {
     image-rendering: pixelated;
     font-smoothing: none;
     overflow-x: hidden;
+    cursor:url("images/mousecursor.png"), default;
 }
 
 h1 {
