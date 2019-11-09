@@ -1,3 +1,15 @@
+// Infinite marquees
+const marquees = document.querySelectorAll(".marquee");
+marquees.forEach((marquee) => {
+  const inner = marquee.firstElementChild;
+  const inner2 = inner.cloneNode(true);
+  inner2.style.animationName = "marquee2";
+  inner2.style.animationDuration = "18s";
+  inner2.style.animationIterationCount = "infinite";
+  inner2.style.animationDelay = "9s";
+  marquee.appendChild(inner2);
+});
+
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -41,12 +53,17 @@ const I_KNOW_IMAGES = shuffle([
   "react",
   "monads"
 ]);
-const iKnowImage = document.getElementById("i-know-img");
-// Preload
-I_KNOW_IMAGES.forEach((name) => { new Image().src = `images/i-know/${name}.gif`; });
+const imageElements = I_KNOW_IMAGES.map((name) => {
+  const img = new Image();
+  img.id = "i-know-img";
+  img.src = `images/i-know/${name}.gif`;
+  img.height = 180;
+  img.alt = name;
+  return img;
+});
 let currentIndex = 0;
 setInterval(() => {
-  iKnowImage.src = `images/i-know/${I_KNOW_IMAGES[currentIndex]}.gif`;
-  iKnowImage.alt = I_KNOW_IMAGES[currentIndex];
+  const img = document.getElementById("i-know-img");
+  img.parentNode.replaceChild(imageElements[currentIndex], img);
   currentIndex = (currentIndex + 1) % I_KNOW_IMAGES.length;
 }, IMAGE_ROTATE_PERIOD);
